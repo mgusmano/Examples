@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shadows-->
+        <scene sceneID="ELB-p8-PnL">
+            <objects>
+                <viewController id="sB4-PR-4Pz" customClass="ShadowViewController" customModule="Examples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="re4-Om-BSL"/>
+                        <viewControllerLayoutGuide type="bottom" id="ivm-F2-SwM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mUs-UD-aht">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueberry" translatesAutoresizingMaskIntoConstraints="NO" id="UCW-n2-eoz">
+                                <rect key="frame" x="241" y="148" width="75" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueberry" translatesAutoresizingMaskIntoConstraints="NO" id="SLX-hu-Hka" userLabel="Img01">
+                                <rect key="frame" x="62" y="86" width="75" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueberry" translatesAutoresizingMaskIntoConstraints="NO" id="kar-8N-w4e">
+                                <rect key="frame" x="69" y="263" width="75" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueberry" translatesAutoresizingMaskIntoConstraints="NO" id="ecj-yD-7WN">
+                                <rect key="frame" x="241" y="353" width="75" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueberry" translatesAutoresizingMaskIntoConstraints="NO" id="yyE-K1-gIC">
+                                <rect key="frame" x="75" y="447" width="75" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueberry" translatesAutoresizingMaskIntoConstraints="NO" id="QP6-B4-bkC" userLabel="Img06">
+                                <rect key="frame" x="241" y="547" width="75" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hotel01" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-gZ-of2" userLabel="hotel">
+                                <rect key="frame" x="319" y="256" width="59" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shadows" id="67A-VZ-yzj">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="VnO-0z-0t8">
+                            <connections>
+                                <action selector="Menu:" destination="sB4-PR-4Pz" id="FXb-wM-Gvj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hotel" destination="kUD-gZ-of2" id="cIt-ov-Mkg"/>
+                        <outlet property="img01" destination="SLX-hu-Hka" id="5bt-rO-QfS"/>
+                        <outlet property="img02" destination="UCW-n2-eoz" id="4HW-Lt-Sd1"/>
+                        <outlet property="img03" destination="kar-8N-w4e" id="i7M-YB-vBV"/>
+                        <outlet property="img04" destination="ecj-yD-7WN" id="sjs-u3-sel"/>
+                        <outlet property="img05" destination="yyE-K1-gIC" id="NIL-lZ-9cK"/>
+                        <outlet property="img06" destination="QP6-B4-bkC" id="STu-qL-9r1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cz2-JB-4X8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443.47826086956525" y="103.53260869565219"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7qn-Gg-Fwd">
+            <objects>
+                <navigationController storyboardIdentifier="Shadow" automaticallyAdjustsScrollViewInsets="NO" id="KGT-d3-7fj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nHX-mT-P4X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sB4-PR-4Pz" kind="relationship" relationship="rootViewController" id="fjp-Q3-6o7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7p-Ak-KiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495.19999999999999" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blueberry" width="80" height="120"/>
+        <image name="hotel01" width="579" height="350"/>
+    </resources>
+</document>

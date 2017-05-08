@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nwH-fw-ZXU">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6mt-3i-pix">
+            <objects>
+                <viewController id="nwH-fw-ZXU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gQr-ff-KKP"/>
+                        <viewControllerLayoutGuide type="bottom" id="wkm-pG-j87"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fwq-Bx-rsg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel01" translatesAutoresizingMaskIntoConstraints="NO" id="xv9-JX-t19">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marc Gusmano" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZu-D0-hh0">
+                                <rect key="frame" x="106" y="70" width="202" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ios/Swift examples" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcS-9T-496">
+                                <rect key="frame" x="83" y="125" width="249" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xv9-JX-t19" firstAttribute="leading" secondItem="Fwq-Bx-rsg" secondAttribute="leading" id="22f-U5-GVa"/>
+                            <constraint firstItem="kZu-D0-hh0" firstAttribute="centerX" secondItem="Fwq-Bx-rsg" secondAttribute="centerX" id="Ioe-5W-VHc"/>
+                            <constraint firstItem="xv9-JX-t19" firstAttribute="top" secondItem="Fwq-Bx-rsg" secondAttribute="top" id="TpC-q9-RJW"/>
+                            <constraint firstAttribute="trailing" secondItem="xv9-JX-t19" secondAttribute="trailing" id="XfN-FL-UGr"/>
+                            <constraint firstItem="DcS-9T-496" firstAttribute="top" secondItem="kZu-D0-hh0" secondAttribute="bottom" constant="19" id="Y0O-b9-i1a"/>
+                            <constraint firstItem="DcS-9T-496" firstAttribute="centerX" secondItem="Fwq-Bx-rsg" secondAttribute="centerX" id="iTD-Da-1bf"/>
+                            <constraint firstItem="kZu-D0-hh0" firstAttribute="top" secondItem="gQr-ff-KKP" secondAttribute="bottom" constant="50" id="jz0-n0-OBC"/>
+                            <constraint firstItem="wkm-pG-j87" firstAttribute="top" secondItem="xv9-JX-t19" secondAttribute="bottom" id="uRR-xD-WtR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y06-ck-iXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114.40000000000001" y="108.39580209895054"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hotel01" width="579" height="350"/>
+    </resources>
+</document>

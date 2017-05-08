@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CoreData-->
+        <scene sceneID="l5w-t6-plf">
+            <objects>
+                <viewController id="Gj5-tJ-q7q" customClass="CoreDataViewController" customModule="Examples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="weT-y2-xoQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="J9X-ia-4vi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQf-FM-0kn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="77e-Fw-hnp">
+                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gj5-tJ-q7q" id="LZc-XB-b8E"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="77e-Fw-hnp" firstAttribute="top" secondItem="weT-y2-xoQ" secondAttribute="bottom" constant="-19" id="3m8-Tc-yCV"/>
+                            <constraint firstItem="J9X-ia-4vi" firstAttribute="top" secondItem="77e-Fw-hnp" secondAttribute="bottom" id="LE7-iy-c7S"/>
+                            <constraint firstItem="77e-Fw-hnp" firstAttribute="leading" secondItem="oQf-FM-0kn" secondAttribute="leadingMargin" constant="-16" id="LlV-Se-2bC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="77e-Fw-hnp" secondAttribute="trailing" constant="-16" id="eQM-zw-3EM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CoreData" id="cvP-l2-mcz">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="TRb-ni-5nu">
+                            <connections>
+                                <action selector="Menu:" destination="Gj5-tJ-q7q" id="Z8i-aa-YFN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="B0H-mw-PW1">
+                            <connections>
+                                <action selector="addName:" destination="Gj5-tJ-q7q" id="fMi-YZ-N8P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="77e-Fw-hnp" id="eyK-AP-9yL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7y-NO-w7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="102.99850074962519"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pVo-RJ-a5q">
+            <objects>
+                <navigationController storyboardIdentifier="CoreData" automaticallyAdjustsScrollViewInsets="NO" id="XR7-1r-mE7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uPd-6b-p1O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gj5-tJ-q7q" kind="relationship" relationship="rootViewController" id="KoQ-sY-gN5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vga-YD-vUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.19999999999999" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+</document>

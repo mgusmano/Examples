@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="GOJ-bK-2rf">
+            <objects>
+                <viewController id="EVj-Kj-9JA" customClass="WebViewController" customModule="Examples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PKs-Vq-wcV"/>
+                        <viewControllerLayoutGuide type="bottom" id="AMp-uc-N9E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cuz-Y4-FfR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xco-wv-462">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AMp-uc-N9E" firstAttribute="top" secondItem="Xco-wv-462" secondAttribute="bottom" id="1jg-uj-saQ"/>
+                            <constraint firstItem="Xco-wv-462" firstAttribute="top" secondItem="cuz-Y4-FfR" secondAttribute="top" constant="44" id="Ucr-3g-qnL"/>
+                            <constraint firstAttribute="trailing" secondItem="Xco-wv-462" secondAttribute="trailing" id="cDC-e3-sNz"/>
+                            <constraint firstItem="Xco-wv-462" firstAttribute="leading" secondItem="cuz-Y4-FfR" secondAttribute="leading" id="ypI-Tu-2FJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TuU-KI-odU">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="hd7-un-krf">
+                            <connections>
+                                <action selector="Menu:" destination="EVj-Kj-9JA" id="pck-jb-Q32"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="Xco-wv-462" id="ja5-kv-0ZY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffB-uV-BFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.20000000000005" y="117.39130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RwJ-j9-MGe">
+            <objects>
+                <navigationController storyboardIdentifier="Web" automaticallyAdjustsScrollViewInsets="NO" id="NzA-Qy-hA3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ACL-sX-sww">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EVj-Kj-9JA" kind="relationship" relationship="rootViewController" id="e5F-No-BmA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ouf-xn-hDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
