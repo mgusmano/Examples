@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-enum MyDataError: Error {
+enum JSONError: Error {
 	case missing(String)
 	case invalid(String, Any)
 }
@@ -28,10 +28,10 @@ class Util: NSObject {
 		return session
 	}
 	
-   
     static func nav(_ name: String) {
 		var whereTo = name
 		if (whereTo == "Menu") { whereTo = "Home" }
+		print(whereTo)
 		
         let storyboard = UIStoryboard(name: whereTo, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: whereTo)
@@ -48,27 +48,6 @@ class Util: NSObject {
             completion: {
                 (value: Bool) in
         });
-        
-        
-        //        if(animate) {
-        //                    UIView.transition(with: (appDelegate.window?.rootViewController?.view)!, duration: 2.3, options: .transitionCrossDissolve, animations: {
-        //                    }, completion: { completed in
-        //                    })
-        //        }
-        
-        //            snapshot.layer.opacity = 0;
-        //            snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
-       
-        
-        //        var animate = false
-        //        if (appDelegate.window?.rootViewController != nil) {
-        //            print(appDelegate.window?.rootViewController as Any)
-        //            animate = true
-        //        }
-        
-        //appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
-        //appDelegate.window?.backgroundColor = UIColor.white
-        
     }
-    
+
 }

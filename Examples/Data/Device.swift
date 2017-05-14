@@ -14,18 +14,18 @@ struct Device {
 
 extension Device {
 	init(json: [String: AnyObject]) throws {
-		guard let type = json["type"] as? String else {throw MyDataError.missing("type")}
-		guard let identifier = json["identifier"] as? String else {throw MyDataError.missing("identifier")}
-		guard let color = json["color"] as? String else {throw MyDataError.missing("color")}
+		guard let type = json["type"] as? String else {throw JSONError.missing("type")}
+		guard let identifier = json["identifier"] as? String else {throw JSONError.missing("identifier")}
+		guard let color = json["color"] as? String else {throw JSONError.missing("color")}
 		
 		let settings = json["settings"] as! NSDictionary
 		let advertisers = settings["advertisers"] as! NSDictionary
 		let ibeacons = advertisers["ibeacon"] as! NSArray
 		let ibeacon = ibeacons[0] as! NSDictionary
 		
-		guard let uuid = ibeacon["uuid"] as? String else {throw MyDataError.missing("uuid")}
-		guard let major = ibeacon["major"] as? Int else {throw MyDataError.missing("major")}
-		guard let minor = ibeacon["minor"] as? Int else {throw MyDataError.missing("minor")}
+		guard let uuid = ibeacon["uuid"] as? String else {throw JSONError.missing("uuid")}
+		guard let major = ibeacon["major"] as? Int else {throw JSONError.missing("major")}
+		guard let minor = ibeacon["minor"] as? Int else {throw JSONError.missing("minor")}
 		
 		self.type = type
 		self.identifier = identifier

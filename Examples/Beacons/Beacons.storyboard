@@ -20,18 +20,9 @@
                     <view key="view" contentMode="scaleToFill" id="4oW-ad-FDU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estimote01" translatesAutoresizingMaskIntoConstraints="NO" id="Ctz-VG-x1Q">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="px9-wY-2hI"/>
-                    <connections>
-                        <outlet property="backgroundImg" destination="Ctz-VG-x1Q" id="qIh-4f-Jw6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xd6-BO-DuT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,6 +60,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="zgg-DU-kfG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
@@ -124,7 +116,4 @@
             <point key="canvasLocation" x="912.79999999999995" y="-731.78410794602701"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="estimote01" width="1025" height="1024"/>
-    </resources>
 </document>

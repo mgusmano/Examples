@@ -13,13 +13,13 @@ struct Gusmano {
 
 extension Gusmano {
 	init(json: [String: AnyObject]) throws {
-		guard let id = json["id"] as? String else {throw MyDataError.missing("id")}
-		guard let email = json["email"] as? String else {throw MyDataError.missing("email")}
-		guard let firstname = json["firstname"] as? String else {throw MyDataError.missing("firstname")}
-		guard let lastname = json["lastname"] as? String else {throw MyDataError.missing("lastname")}
-		guard let title = json["title"] as? String else {throw MyDataError.missing("title")}
-		guard let phone = json["phone"] as? String else {throw MyDataError.missing("phone")}
-		guard let picture = json["picture"] as? String else {throw MyDataError.missing("picture")}
+		guard let id = json["id"] as? String else {throw JSONError.missing("id")}
+		guard let email = json["email"] as? String else {throw JSONError.missing("email")}
+		guard let firstname = json["firstname"] as? String else {throw JSONError.missing("firstname")}
+		guard let lastname = json["lastname"] as? String else {throw JSONError.missing("lastname")}
+		guard let title = json["title"] as? String else {throw JSONError.missing("title")}
+		guard let phone = json["phone"] as? String else {throw JSONError.missing("phone")}
+		guard let picture = json["picture"] as? String else {throw JSONError.missing("picture")}
 		self.id = id
 		self.email = email
 		self.firstname = firstname

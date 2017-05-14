@@ -28,9 +28,9 @@ class LoginViewController: UIViewController, AVAudioPlayerDelegate {
             //audioPlayer.delegate = self
             //audioPlayer.prepareToPlay()
             audioPlayer.setVolume(1, fadeDuration: 0)
-            self.audioPlayer.play()
-            audioPlayer.setVolume(0, fadeDuration: 5)
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(LoginViewController.updateTime), userInfo: nil, repeats: true)
+//            self.audioPlayer.play()
+//            audioPlayer.setVolume(0, fadeDuration: 5)
+//            timer = Timer.scheduledTimer(timeInterval:1.0,target:self,selector:#selector(LoginViewController.updateTime),userInfo:nil,repeats:true)
         }
         catch {
             print("***********")
@@ -45,20 +45,24 @@ class LoginViewController: UIViewController, AVAudioPlayerDelegate {
         let minutes = currentTime/60
         let seconds = currentTime - minutes * 60
         
-        if (seconds == 5) {
-            audioPlayer.stop()
-            timer.invalidate()
-        }
+//        if (seconds == 5) {
+//            audioPlayer.stop()
+//            timer.invalidate()
+//        }
         playedTime.text = NSString(format: "%02d:%02d", minutes,seconds) as String
     }
     
     @IBAction func play(_ sender: Any) {
         audioPlayer.setVolume(1, fadeDuration: 2)
         audioPlayer.play()
+		timer = Timer.scheduledTimer(timeInterval:1.0,target:self,selector:#selector(LoginViewController.updateTime),userInfo:nil,repeats:true)
     }
     @IBAction func pause(_ sender: Any) {
         if audioPlayer.isPlaying {
             audioPlayer.pause()
+			audioPlayer.stop()
+			timer.invalidate()
+			
         }
         else {
             

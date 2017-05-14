@@ -124,12 +124,12 @@ class MyTableViewCell: UITableViewCell {
 	
 	func three() {
 		
-		let gap : CGFloat = 10
-		let labelHeight: CGFloat = 30
-		let labelWidth: CGFloat = 150
-		let lineGap : CGFloat = 5
-		let label2Y : CGFloat = gap + labelHeight + lineGap
-		let imageSize : CGFloat = 30
+//		let gap : CGFloat = 10
+//		let labelHeight: CGFloat = 30
+//		let labelWidth: CGFloat = 150
+//		let lineGap : CGFloat = 5
+//		let label2Y : CGFloat = gap + labelHeight + lineGap
+//		let imageSize : CGFloat = 30
 		
 		myLabel1 = UILabel()
 		//myLabel1.frame = CGRect(x:gap, y:gap, width:labelWidth, height:labelHeight)

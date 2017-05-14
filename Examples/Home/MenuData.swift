@@ -1,5 +1,6 @@
 let menuData = [
 	Menu(title: "Hotel California", storyboard: "Login"),
+	Menu(title: "Orientation", storyboard: "Orientation"),
 	Menu(title: "My Beacons", storyboard: "Beacons"),
 	Menu(title: "People", storyboard: "People"),
 	Menu(title: "Estimote Cloud", storyboard: "Cloud"),
@@ -12,6 +13,6 @@ let menuData = [
 	Menu(title: "Web", storyboard: "Web"),
 	Menu(title: "Core Data", storyboard: "CoreData"),
 	Menu(title: "Cell", storyboard: "Cell"),
-	Menu(title: "Shadow", storyboard: "Shadow")
+	Menu(title: "Shadow", storyboard: "Shadow"),
 	//Menu(title: "SideMenu", storyboard: "SideMenu")
 ]

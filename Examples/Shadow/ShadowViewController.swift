@@ -1,7 +1,47 @@
 import UIKit
+import FacebookCore
+import FacebookLogin
 
-class ShadowViewController: UIViewController {
+class ShadowViewController: UIViewController, LoginButtonDelegate {
 
+	func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+		print("a")
+		switch result {
+		case .failed(let error):
+			print("1")
+			print(error)
+		case .cancelled:
+			print("Cancelled")
+		case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+			print("Logged In")
+			facebookLogin()
+		}
+	}
+	
+	func loginButtonDidLogOut(_ loginButton: LoginButton) {
+		print("Logged Out")
+	}
+	
+	func facebookLogin() {
+		if let accessToken = AccessToken.current {
+			let params = ["fields":"name,email"]
+			let graphRequest = GraphRequest(graphPath: "me", parameters: params)
+			graphRequest.start { (urlResponse, requestResult) in
+				switch requestResult {
+				case .failed(let error):
+					print(error)
+				case .success(let graphResponse):
+					if let responseDictionary = graphResponse.dictionaryValue {
+						UserDefaults.standard.set(responseDictionary, forKey: "userInfo")
+					}
+				}
+			}
+		} else {
+		}
+	}
+	
+	
+	
 	@IBAction func Menu(_ sender: Any) { Util.nav("Menu") }
 	@IBOutlet weak var img01: UIImageView!
 	@IBOutlet weak var img02: UIImageView!
@@ -14,6 +54,14 @@ class ShadowViewController: UIViewController {
         super.viewDidLoad()
 		
 	
+		let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])
+		loginButton.delegate = self
+		loginButton.center = view.center
+		
+		view.addSubview(loginButton)
+		
+		
+		
 		let h2 = UIImageView(image: UIImage(named: "hotel01"))
 		h2.frame = CGRect(x: 30, y: 140, width: 50, height: 25)
 		

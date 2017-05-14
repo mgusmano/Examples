@@ -95,7 +95,7 @@ class PeopleMasterViewController: UITableViewController {
 //		self.navigationController?.navigationBar.alpha = 0.0
 //		self.navigationController?.navigationBar.isTranslucent = true
 		
-		let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: "goBack")
+		let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(PeopleMasterViewController.goBack))
 		navigationItem.leftBarButtonItem = backButton
 
 		
